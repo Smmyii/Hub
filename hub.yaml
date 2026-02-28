@@ -1,0 +1,5 @@
+machine: archbox
+hostname: sammy-desktop
+home: /home/sammy
+projects_root: ~/Documents
+hub_path: ~/Documents/Hub

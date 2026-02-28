@@ -1,0 +1,30 @@
+name: Bob:Kompisapp
+project: Kompisapp
+title: "Project Architect"
+status: active
+deployed: true
+
+context_path: Kompisapp/.planning/bob
+
+departments:
+  - name: Mobile
+    scope: "Learner-facing app — screens, components, contexts, journey/quiz logic"
+  - name: Admin
+    scope: "Admin panel — content management, lesson editor, question tooling"
+
+key_files:
+  - Kompisapp/.planning/PROJECT.md
+  - Kompisapp/.planning/ROADMAP.md
+  - Kompisapp/.planning/STATE.md
+  - Kompisapp/.planning/codebase/
+
+notes: |
+  Deployed 2026-02-26. v1.0 shipped, v1.1 planned (3 phases).
+  Simpler than Bob:Nano — single app, two departments (Mobile + Admin).
+  Admin panel is expected to grow significantly.
+  No staging workflow needed (not a live desktop environment).
+
+last_contact: "2026-02-26"
+last_mail: "mail/inbox/2026-02-26-from-bob-kompisapp-jarvis-request.md"
+last_mail_date: "2026-02-26"
+days_since_contact: 2  # auto-flag if >7

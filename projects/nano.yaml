@@ -1,0 +1,12 @@
+name: Nano
+path: Nano
+bob: Nano/.planning/bob
+tech: [TypeScript, React, Vite, Tailwind, Express, PostgreSQL, SQLite-WASM]
+status: active
+description: "Life OS — personal productivity platform with Jarvis AI"
+
+summary:
+  current_focus: "Canvas migration (tldraw → React Flow) + server work"
+  active_streams: 2
+  blocked_items: 0
+  last_activity: "2026-02-26"

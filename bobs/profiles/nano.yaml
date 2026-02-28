@@ -1,0 +1,36 @@
+name: Bob:Nano
+project: Nano
+title: "Central Architect (OG)"
+status: active
+deployed: true
+
+context_path: Nano/.planning/bob
+migration_status: "in_progress — building new bob/ structure alongside BOB-HANDOFF.md"
+
+departments:
+  - name: Core
+    scope: "Web app (React/Vite), server (Express), AI pipeline"
+  - name: Mobile
+    scope: "Android app (Kotlin), offline-first, SQLite sync"
+  - name: API
+    scope: "REST endpoints, sync protocol, VPS deployment"
+
+key_files:
+  - Nano/.planning/INTEGRATION.md    # API contract bible (v1.4.1, LOCKED)
+  - Nano/.planning/PINS.md           # Milestone backlog (12 pins)
+  - Nano/.planning/BOB-HANDOFF.md    # Legacy handoff (being replaced)
+  - Nano/knowledge/                  # 16 domain knowledge files
+
+notes: |
+  Bob:Nano is the OG — first Bob, most mature. Patterns established here
+  become the template for all future Bobs. Currently migrating from
+  BOB-HANDOFF.md to the layered bob/ context structure.
+
+  Most common task: updating planning docs after decisions (~60% of activity).
+  The station model captures execution flow but Bob's day-to-day is mostly
+  decision → update INTEGRATION.md → update CLAUDE.md → update handoff docs.
+
+last_contact: "2026-02-26"
+last_mail: "mail/inbox/2026-02-26-from-bob-nano-reply.md"
+last_mail_date: "2026-02-26"
+days_since_contact: 2  # auto-flag if >7

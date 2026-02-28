@@ -1,0 +1,12 @@
+name: Kompisapp
+path: Kompisapp
+bob: Kompisapp/.planning/bob
+tech: [react-native, expo, trpc, supabase, typescript]
+status: active
+description: "Commercial driving theory learning app — Swedish driving test prep with TLC coach"
+
+summary:
+  current_focus: "v1.1 Phase 5 (Tiered Readiness) — ready to plan"
+  active_streams: 0
+  blocked_items: 0
+  last_activity: "2026-02-26 — Bob deployed"

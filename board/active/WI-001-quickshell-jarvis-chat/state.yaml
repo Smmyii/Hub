@@ -1,0 +1,10 @@
+id: WI-001
+station: executing
+assigned_to: bob:desktop
+project: config
+created: 2026-02-26T12:00:00Z
+last_transition: 2026-02-26T12:00:00Z
+last_updated: 2026-02-26T12:00:00Z
+sequence: 3
+blocked: false
+blocked_reason: ""
