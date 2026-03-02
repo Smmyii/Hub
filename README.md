@@ -1,10 +1,6 @@
 # Hub
 
-**A file-based orchestration system that coordinates work across 4 projects, 3 AI agents, and 12+ departments -- using zero application code.**
-
-Hub is not software. It is a set of protocols: markdown files, YAML state, and append-only logs that enable autonomous AI agents ("Bobs") to coordinate work across independent projects without a central runtime. The filesystem is the database. Files are the API.
-
-> 64 files. 0 lines of application code. Pure protocol design.
+A file-based orchestration layer that coordinates work across multiple projects and AI agents. There is no application code — the protocols (markdown files, YAML state, append-only logs) are the system. The filesystem is the database. Files are the API.
 
 ---
 
@@ -29,27 +25,27 @@ Bobs own: project context, department work, implementation decisions
 
 ---
 
-## What This Demonstrates
+## How It Works
 
-**Agentic workflow design.** This is a working multi-agent coordination system. Each "Bob" is an AI instance with its own identity, scope, and operating constraints. Hub routes work between them through file-based protocols -- not API calls, not message queues, markdown files that both humans and AI agents read and write.
+Projects register in `projects/`. Each project gets a **Bob** — an AI architect instance (currently Claude) that owns that project's context and makes implementation decisions.
 
-**Systems thinking without code.** Hub solves a real coordination problem (4 projects, 12+ departments, concurrent AI instances) without writing a single line of application code. The architecture IS the solution: ownership models prevent write conflicts, append-only logs enable state reconstruction, and station-based workflows enforce quality gates.
+Work flows through a station-based board:
 
-**Future-proof protocol design.** Every file convention is designed to be machine-readable. When the AI assistant (Jarvis) gains autonomy, it doesn't need a new API -- it reads and writes the same files. The transition from human-orchestrated to AI-orchestrated is a policy change, not a rewrite.
+```
+Proposed → Research → Planning → Ready → Executing → Review → Done
+```
+
+Each station has gate checks that validate work before it advances. For example, a work item can't move to "Executing" until its plan has been reviewed and all dependencies documented.
+
+Bobs communicate asynchronously by writing structured mail — markdown files with typed frontmatter dropped into inbox/outbox directories. No real-time channel needed. A Bob finishes a session, writes a mail to Hub saying "Core department shipped canvas layer 2, here's what changed." Hub reads it next session and routes follow-up work.
+
+In practice this means: one Claude instance is building the Android sync protocol while another is shipping the canvas workspace on web, and neither blocks the other. They both work against the same locked API contract.
 
 ---
 
 ## Core Systems
 
 ### Board (Work Item Tracking)
-
-```
-Proposed → Research → Planning → Ready → Executing → Review → Done
-                                   │
-                              [gate check]
-                        validates work before
-                         moving to next station
-```
 
 Work items live as directories with immutable objectives, mutable state, and append-only history:
 
@@ -73,7 +69,7 @@ mail/
 └── sent/           # Delivered messages (archived)
 ```
 
-Each message has `from`, `to`, `type`, and `action_needed` fields. Bobs write on session end, Hub reads on session start. No real-time channel needed.
+Each message has `from`, `to`, `type`, and `action_needed` fields.
 
 ### Bob Profiles (Agent Deployment)
 
@@ -86,7 +82,7 @@ bobs/profiles/
 
 Each profile defines: deployment status, context paths, scope boundaries, operating rules, and freshness tracking.
 
-**Bob:Desktop** has a mandatory staging workflow because bad QML code crashed the live desktop multiple times. All code goes to staging first, gets validated, then deploys with automatic backup and one-command rollback.
+Bob:Desktop has a mandatory staging workflow because bad QML code crashed the live desktop multiple times. All code goes to staging first, gets validated, then deploys with automatic backup and one-command rollback.
 
 ### Project Registry
 
@@ -100,55 +96,7 @@ projects/
 
 ---
 
-## Design Principles
-
-| Principle | What It Means | What Failure It Prevents |
-|-----------|--------------|------------------------|
-| **One writer per file** | Hub owns state transitions, Bobs own project context | Concurrent mutations corrupting state |
-| **Append-only history** | State can be reconstructed from history logs | Overwritten state making recovery impossible |
-| **Station-based gates** | Work validated before moving to next station | 25% of multi-agent failures from skipping verification |
-| **Thin context** | Bob boots from ~100 lines, loads details on demand | LLM performance degradation from unnecessary context |
-| **File-based protocols** | Every convention is machine-readable markdown/YAML | No rewrite needed when transitioning to AI orchestration |
-| **Ownership over locking** | One owner per file, not concurrent access with locks | Complexity of distributed locking without a runtime |
-
----
-
-## The Connection to Agentic AI
-
-Hub is designed to transition from human-orchestrated to AI-orchestrated without changing the underlying system:
-
-| Current (Human + Claude) | Future (Jarvis Autonomous) |
-|--------------------------|---------------------------|
-| Sammy reads mail/inbox/ | Jarvis reads mail/inbox/ |
-| Sammy moves work items between stations | Jarvis moves work items between stations |
-| Sammy writes dispatches to mail/outbox/ | Jarvis writes dispatches to mail/outbox/ |
-| Sammy checks gate criteria before advancing | Jarvis checks gate criteria before advancing |
-| Sammy deploys Bob instances manually | Jarvis spawns Bob instances via API |
-
-Same files. Same protocols. Different operator.
-
----
-
-## Stats
-
-| Metric | Value |
-|--------|-------|
-| Files | 64 |
-| Application code | 0 lines |
-| Projects managed | 4 |
-| Active AI agents (Bobs) | 3 |
-| Departments coordinated | 12+ |
-| Mail messages exchanged | 10+ |
-| Active work items | 2 |
-| Research-backed design decisions | 7 |
-
----
-
 ## Related Repositories
 
-- **[Nano](https://github.com/Smmyii/Nano)** -- The primary project Hub coordinates (web + server + AI)
-- **[Nano-Mobile](https://github.com/Smmyii/Nano-Mobile)** -- Native Android client
-
----
-
-*Designed by Sammy. No runtime. No database. No server. Just files.*
+- **[Nano](https://github.com/Smmyii/Nano)** — The primary project Hub coordinates (web + server + AI)
+- **[Nano-Mobile](https://github.com/Smmyii/Nano-Mobile)** — Native Android client
