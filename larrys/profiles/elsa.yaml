@@ -1,0 +1,28 @@
+name: Larry:Elsa
+project: Elsa
+title: "Project Architect"
+status: active
+deployed: false
+
+context_path: Sara/.planning/larry
+repo: ~/Documents/Sara
+github: https://github.com/Smmyii/Elsa
+type: freelance
+client: Elsa
+
+departments: []
+
+key_files:
+  - Sara/package.json
+  - Sara/prisma/schema.prisma
+  - Sara/src/app/
+
+notes: |
+  Freelance client website for Elsa (hairstylist). Next.js + Prisma stack.
+  Pre-launch — client contact planned this week. Simple project, unlikely
+  to need departments unless scope grows. Priority: finish and deliver for income.
+
+last_contact: "2026-03-10"
+last_mail: null
+last_mail_date: null
+days_since_contact: 0  # auto-flag if >7
