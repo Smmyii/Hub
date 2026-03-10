@@ -4,7 +4,7 @@ title: "Project Architect"
 status: active
 deployed: true
 
-context_path: Kompisapp/.planning/bob
+context_path: Licom/app/.planning/larry
 
 departments:
   - name: Mobile
@@ -13,17 +13,17 @@ departments:
     scope: "Admin panel — content management, lesson editor, question tooling"
 
 key_files:
-  - Kompisapp/.planning/PROJECT.md
-  - Kompisapp/.planning/ROADMAP.md
-  - Kompisapp/.planning/STATE.md
-  - Kompisapp/.planning/codebase/
+  - Licom/app/.planning/PROJECT.md
+  - Licom/app/.planning/ROADMAP.md
+  - Licom/app/.planning/STATE.md
+  - Licom/app/.planning/codebase/
 
 notes: |
   Deployed 2026-02-26. v1.0 shipped, v1.1 planned (3 phases).
   Simpler than Bob:Nano — single app, two departments (Mobile + Admin).
   Admin panel is expected to grow significantly.
   No staging workflow needed (not a live desktop environment).
-  Formerly Bob:Kompisapp, renamed to Larry:Licom.
+  Formerly Bob:Kompisapp, renamed to Larry:Licom. Project renamed from Kompisapp to Licom.
 
 last_contact: "2026-02-26"
 last_mail: "mail/inbox/2026-02-26-from-bob-kompisapp-jarvis-request.md"

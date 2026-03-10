@@ -82,7 +82,7 @@ Each profile defines: deployment status, context paths, scope boundaries, operat
 ```
 projects/
 ├── nano.yaml           # Nano life OS (web + mobile + server + AI)
-├── kompisapp.yaml      # Swedish driving theory app
+├── licom.yaml          # Swedish driving theory app
 ├── elsa.yaml           # Freelance client website
 ├── config.yaml         # Registry configuration
 └── nano-x-hub/         # Cross-department comms (BMO <-> Bob:Nano)
@@ -112,7 +112,7 @@ canvas-info/
 | Project | Agent | Stack | Status |
 |---------|-------|-------|--------|
 | Nano | Bob:Nano (special) | React, Vite, TS, Express, PostgreSQL | Active |
-| Kompisapp | Larry:Licom | React Native, Expo, Supabase | v1.1 planned |
+| Licom | Larry:Licom | React Native, Expo, Supabase | v1.1 planned |
 | Elsa | Larry:Elsa | Next.js, Prisma | Pre-launch |
 | Desktop/Config | Larry:Desktop | QML, QuickShell, Hyprland | Active |
 

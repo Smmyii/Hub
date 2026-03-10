@@ -16,7 +16,7 @@ The Hub is a dispatch center at `~/Documents/Hub/` that coordinates work across 
 ├── README.md
 ├── projects/                   # Thin project manifests
 │   ├── nano.yaml               # Life OS + Jarvis AI
-│   ├── kompisapp.yaml          # Commercial driving theory app
+│   ├── licom.yaml              # Commercial driving theory app
 │   ├── sara.yaml               # Commercial client app
 │   └── config.yaml             # Desktop environment (QuickShell, Hyprland)
 ├── board/                      # Work items (kanban)
@@ -100,7 +100,7 @@ Bob is a project orchestrator — a Claude instance configured with deep knowled
 ```
 Hub → bob:nano     (Central Architect — manages Core, Mobile, API departments)
 Hub → bob:desktop  (Shell Architect — manages QuickShell/Hyprland with staging workflow)
-Hub → bob:kompisapp  (not yet deployed)
+Hub → larry:licom    (active)
 Hub → bob:sara       (not yet deployed)
 ```
 
@@ -246,7 +246,7 @@ Before Hub, projects were isolated silos. You were the only connection between t
 - "What's blocking Sara?" → Hub reads state, shows blocked reason
 - "Deploy execution for WI-003" → Hub validates plan, dispatches to Bob
 - "Update" → Hub re-reads mail and work items, reports changes
-- "Set up a Bob for Kompisapp" → Hub deploys Bob from template
+- "Set up a Larry for Licom" → Hub deploys Larry from template
 
 **Hub does NOT:** read source code, execute code, make architecture decisions, hold deep project context between sessions.
 

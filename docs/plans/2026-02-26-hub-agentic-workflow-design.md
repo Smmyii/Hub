@@ -43,7 +43,7 @@ The Hub (`~/Documents/Hub/`) is a dispatch center with specialized stations that
                     │   Projects  │  ← Bobs live here, deep context stays here
                     ├─────────────┤
                     │ Nano        │
-                    │ Kompisapp   │
+                    │ Licom       │
                     │ Sara        │
                     └─────────────┘
 ```
@@ -51,7 +51,7 @@ The Hub (`~/Documents/Hub/`) is a dispatch center with specialized stations that
 **Hierarchy:**
 ```
 Hub → Bob:Nano → Core/Mobile/API (departments) → subagents
-Hub → Bob:Kompisapp → departments → subagents
+Hub → Larry:Licom → departments → subagents
 Hub → Bob:Sara → departments → subagents
 ```
 
@@ -337,7 +337,7 @@ Hub/bobs/
     conventions.md      # Mail format, status file format, etc.
   profiles/
     nano.yaml           # Hub's knowledge about each Bob
-    kompisapp.yaml
+    licom.yaml
     sara.yaml
 ```
 
@@ -363,10 +363,10 @@ Hub/bobs/
 | "Let's do research on WI-007" | Moves item to Research, starts brainstorming |
 | "What's blocking Sara?" | Reads state, shows blocked reason, asks for decision |
 | "Deploy execution for WI-003" | Validates plan exists, prepares dispatch to Bob |
-| "How's Kompisapp doing?" | Reads project summary, optionally goes deeper |
+| "How's Licom doing?" | Reads project summary, optionally goes deeper |
 | "Update" | Re-reads mail and work items, reports changes |
 | "Create a work item for [idea]" | Creates objective.md in backlog |
-| "Set up a Bob for Kompisapp" | Runs Bob deployment from template |
+| "Set up a Larry for Licom" | Runs Larry deployment from template |
 
 ### Hub Does NOT
 
@@ -426,7 +426,7 @@ Both portable independently.
 │
 ├── projects/
 │   ├── nano.yaml
-│   ├── kompisapp.yaml
+│   ├── licom.yaml
 │   └── sara.yaml
 │
 ├── board/
@@ -457,7 +457,7 @@ Both portable independently.
 │   │   └── conventions.md
 │   └── profiles/
 │       ├── nano.yaml
-│       ├── kompisapp.yaml
+│       ├── licom.yaml
 │       └── sara.yaml
 │
 ├── docs/

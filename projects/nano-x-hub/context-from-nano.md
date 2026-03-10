@@ -23,7 +23,7 @@ Nano is Sammy's personal Life OS. The relevant infrastructure for Hub:
 
 ## The Freelance Pipeline Vision
 
-Sammy is building a freelance business alongside Licom/Kompisapp. The pipeline:
+Sammy is building a freelance business alongside Licom. The pipeline:
 
 **Capture**: Sammy meets a potential client. From his phone, he sends contact info + what they need to Jarvis.
 
@@ -46,7 +46,7 @@ This is the endgame vision. Not day-1 reality. Right now: Sammy builds the old w
 | Project | Type | Stack | Status | Notes |
 |---------|------|-------|--------|-------|
 | Nano | Personal OS | React+Vite+TS, Express, PostgreSQL | Active, 52+ commits ahead | The backbone |
-| Licom/Kompisapp | Product | React Native, Expo, Supabase | v1.1 Phase 5 ready | Driving theory app, with Khaled |
+| Licom | Product | React Native, Expo, Supabase | v1.1 Phase 5 ready | Driving theory app, with Khaled |
 | Sara | Client (freelance) | Next.js, Prisma | Active codebase | Hairstylist website |
 | Future freelance clients | Pipeline | TBD per client | Not started | Local businesses, referrals |
 
@@ -127,7 +127,7 @@ When organizing projects and unstaling everything, keep these in mind:
 
 ## What Nano Needs from Hub
 
-- Organized project configs for all active projects (Nano, Kompisapp, Sara)
+- Organized project configs for all active projects (Nano, Licom, Sara)
 - A clear project lifecycle: lead → scoped → planned → in-progress → delivered → maintenance
 - Larry persona set up and ready
 - Freelance pipeline structure in place (even if empty — the schema matters)

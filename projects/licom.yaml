@@ -1,8 +1,8 @@
-name: Kompisapp
-repo: ~/Documents/Kompisapp/Kompisapp
-github: https://github.com/Smmyii/Kompisapp
-path: Kompisapp
-bob: Kompisapp/.planning/bob
+name: Licom
+repo: ~/Documents/Licom/app
+github: https://github.com/Smmyii/Licom
+path: Licom/app
+bob: Licom/app/.planning/larry
 agent: Larry:Licom
 tech: [react-native, expo, trpc, supabase, typescript]
 status: active

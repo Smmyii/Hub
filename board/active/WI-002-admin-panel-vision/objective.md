@@ -1,18 +1,18 @@
 # WI-002: Admin Panel Vision & Scoping
 
-**Project:** Kompisapp
+**Project:** Licom
 **Origin:** Hub session 2026-02-26
 **Priority:** Medium
 **Size:** Research only (1 session)
 
 ## What
-Research and scope what the Kompisapp Admin panel should become. The current panel is bare-bones CRUD — it needs a vision for growth.
+Research and scope what the Licom Admin panel should become. The current panel is bare-bones CRUD — it needs a vision for growth.
 
 ## Why
 Sammy expects the Admin panel to grow into something significantly better. Before planning any work, Bob needs to research what would be most valuable and produce a scoped proposal.
 
 ## Acceptance Criteria
-- [ ] Research document covering: what exists today, what's missing, what similar apps offer, what would serve Kompisapp's content pipeline best
+- [ ] Research document covering: what exists today, what's missing, what similar apps offer, what would serve Licom's content pipeline best
 - [ ] Prioritized feature list with rationale
 - [ ] Proposed phasing (what to build first, what can wait)
 - [ ] Mail to Hub with findings and recommendation
