@@ -1,5 +1,5 @@
-name: Bob:Kompisapp
-project: Kompisapp
+name: Larry:Licom
+project: Licom
 title: "Project Architect"
 status: active
 deployed: true
@@ -23,6 +23,7 @@ notes: |
   Simpler than Bob:Nano — single app, two departments (Mobile + Admin).
   Admin panel is expected to grow significantly.
   No staging workflow needed (not a live desktop environment).
+  Formerly Bob:Kompisapp, renamed to Larry:Licom.
 
 last_contact: "2026-02-26"
 last_mail: "mail/inbox/2026-02-26-from-bob-kompisapp-jarvis-request.md"

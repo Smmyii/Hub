@@ -1,17 +1,17 @@
-# Bob Conventions — Communication & File Formats
+# Larry Conventions — Communication & File Formats
 
 ## Mail Format
 
-Messages to Hub go in `~/Documents/Hub/mail/inbox/` as markdown files.
+Messages to BMO go in `~/Documents/Hub/mail/inbox/` as markdown files.
 
-**Filename:** `YYYY-MM-DD-from-bob-<project>-<subject>.md`
+**Filename:** `YYYY-MM-DD-from-larry-<project>-<subject>.md`
 
 **Structure:**
 ```markdown
 # Subject Line
 
-**From:** Bob:<Project>
-**To:** Hub Claude
+**From:** Larry:<Project>
+**To:** BMO
 **Date:** YYYY-MM-DD
 **Type:** status_update | request | question | context_share
 **Action Needed:** Yes/No — brief description if yes
@@ -22,18 +22,18 @@ Body content here.
 
 ---
 
-*Bob:<Project> — YYYY-MM-DD*
+*Larry:<Project> — YYYY-MM-DD*
 ```
 
 **Types:**
 - `status_update` — work completed, phase changed, milestone hit
-- `request` — need something from Hub or another Bob
+- `request` — need something from BMO or another Larry
 - `question` — need a decision or clarification
-- `context_share` — sharing information Hub should know
+- `context_share` — sharing information BMO should know
 
 ## Status Files
 
-### state.yaml (Bob's current position)
+### state.yaml (Larry's current position)
 ```yaml
 project: <name>
 session_date: YYYY-MM-DD
@@ -58,7 +58,7 @@ YYYY-MM-DD | OVERRIDE | <what changed> | <why it changed>
 2. Read `state.yaml` — where is everything
 3. Read `departments.yaml` — department summaries
 4. Check `needs/*.md` — pending requests
-5. Check Hub mail — anything from Hub
+5. Check BMO mail — anything from BMO
 6. Read `active-work/<focus>.md` — based on session direction
 7. Grep `decisions.log` — when past context needed
 

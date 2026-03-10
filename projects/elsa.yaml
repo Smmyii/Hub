@@ -1,0 +1,14 @@
+name: Elsa
+path: Sara
+bob: Sara/.planning/larry
+tech: [next.js, prisma]
+status: active
+type: freelance
+client: "Elsa"
+description: "Freelance client website — hairstylist"
+
+summary:
+  current_focus: ""
+  active_streams: 0
+  blocked_items: 0
+  last_activity: ""

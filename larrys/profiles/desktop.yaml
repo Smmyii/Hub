@@ -1,4 +1,4 @@
-name: Bob:Desktop
+name: Larry:Desktop
 project: Config
 title: "Desktop Shell Architect"
 status: active
@@ -42,7 +42,7 @@ key_references:
   - ~/.config/quickshell/ii/modules/ii/sidebarLeft/    # Existing sidebar (reference for panel patterns)
 
 notes: |
-  Bob:Desktop exists because QuickShell is a live environment.
+  Larry:Desktop exists because QuickShell is a live environment.
   Bad QML crashes the shell — Sammy loses his desktop and any
   unsaved work in running terminals. The staging mechanism
   ensures code is reviewed and deployed on Sammy's terms.
