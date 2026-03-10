@@ -1,12 +1,17 @@
 name: Nano
+repo: ~/Documents/Nano
+github: https://github.com/Smmyii/Nano
 path: Nano
 bob: Nano/.planning/bob
+agent: Bob:Nano
 tech: [TypeScript, React, Vite, Tailwind, Express, PostgreSQL, SQLite-WASM]
 status: active
+lifecycle: in-progress
+type: personal
 description: "Life OS — personal productivity platform with Jarvis AI"
 
 summary:
   current_focus: "Canvas migration (tldraw → React Flow) + server work"
   active_streams: 2
   blocked_items: 0
-  last_activity: "2026-02-26"
+  last_activity: "2026-03-10"

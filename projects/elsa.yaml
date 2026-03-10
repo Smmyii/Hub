@@ -1,14 +1,18 @@
 name: Elsa
+repo: ~/Documents/Sara
+github: https://github.com/Smmyii/Elsa
 path: Sara
 bob: Sara/.planning/larry
+agent: Larry:Elsa
 tech: [next.js, prisma]
 status: active
+lifecycle: scoped
 type: freelance
-client: "Elsa"
+client: Elsa
 description: "Freelance client website — hairstylist"
 
 summary:
   current_focus: ""
   active_streams: 0
   blocked_items: 0
-  last_activity: ""
+  last_activity: "2026-03-10"

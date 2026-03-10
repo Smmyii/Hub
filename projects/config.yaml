@@ -1,12 +1,16 @@
 name: Config
+repo: ~/Documents/Config
 path: Config
 bob: Config/quickshell/bob
+agent: Larry:Desktop
 tech: [QML, JavaScript, Bash]
 status: active
+lifecycle: in-progress
+type: personal
 description: "Desktop environment — QuickShell, Hyprland, Kitty, Fish"
 
 summary:
   current_focus: "Jarvis chat widget (WI-001)"
   active_streams: 1
   blocked_items: 0
-  last_activity: "2026-02-26"
+  last_activity: "2026-03-03"

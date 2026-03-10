@@ -1,12 +1,18 @@
 name: Kompisapp
+repo: ~/Documents/Kompisapp/Kompisapp
+github: https://github.com/Smmyii/Kompisapp
 path: Kompisapp
 bob: Kompisapp/.planning/bob
+agent: Larry:Licom
 tech: [react-native, expo, trpc, supabase, typescript]
 status: active
+lifecycle: in-progress
+type: product
+partner: Khaled
 description: "Commercial driving theory learning app — Swedish driving test prep with TLC coach"
 
 summary:
   current_focus: "v1.1 Phase 5 (Tiered Readiness) — ready to plan"
   active_streams: 0
   blocked_items: 0
-  last_activity: "2026-02-26 — Bob deployed"
+  last_activity: "2026-03-10"

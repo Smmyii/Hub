@@ -1,0 +1,4 @@
+2026-03-10 | DECISION | Rename Bob system to Larry (except Bob:Nano) | Distinguish Hub agents from Nano's architect. BMO orchestrates Larrys.
+2026-03-10 | DECISION | Rename Sara project to Elsa | Align with client name for clarity.
+2026-03-10 | DECISION | BMO identity established | Hub orchestrator with identity.md, conventions.md, dashboard, state tracking.
+2026-03-10 | DECISION | Keep nano-x-hub as active comms channel | BMO ↔ Bob:Nano communication via living docs until task queue API is built.
