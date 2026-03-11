@@ -1,8 +1,8 @@
 name: Elsa
-repo: ~/Documents/Sara
+repo: ~/Documents/Elsa
 github: https://github.com/Smmyii/Elsa
-path: Sara
-bob: Sara/.planning/larry
+path: Elsa
+bob: Elsa/.planning/larry
 agent: Larry:Elsa
 tech: [next.js, prisma]
 status: active

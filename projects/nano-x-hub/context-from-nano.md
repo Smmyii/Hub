@@ -47,7 +47,7 @@ This is the endgame vision. Not day-1 reality. Right now: Sammy builds the old w
 |---------|------|-------|--------|-------|
 | Nano | Personal OS | React+Vite+TS, Express, PostgreSQL | Active, 52+ commits ahead | The backbone |
 | Licom | Product | React Native, Expo, Supabase | v1.1 Phase 5 ready | Driving theory app, with Khaled |
-| Sara | Client (freelance) | Next.js, Prisma | Active codebase | Hairstylist website |
+| Elsa | Client (freelance) | Next.js, Prisma | Active codebase | Hairstylist website |
 | Future freelance clients | Pipeline | TBD per client | Not started | Local businesses, referrals |
 
 ---
@@ -127,7 +127,7 @@ When organizing projects and unstaling everything, keep these in mind:
 
 ## What Nano Needs from Hub
 
-- Organized project configs for all active projects (Nano, Licom, Sara)
+- Organized project configs for all active projects (Nano, Licom, Elsa)
 - A clear project lifecycle: lead → scoped → planned → in-progress → delivered → maintenance
 - Larry persona set up and ready
 - Freelance pipeline structure in place (even if empty — the schema matters)

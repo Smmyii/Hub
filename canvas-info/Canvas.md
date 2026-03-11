@@ -10,7 +10,7 @@ graph LR
   mmiccm0a["App"]
   mmicouqk["Working with?"]
   mmj5peu4["Freelances"]
-  mmicegt3["Elsa's website which is in /sara"]
+  mmicegt3["Elsa's website"]
   mmj7f3ml["Faith"]
   mmj7fx5r["Career"]
   mmjnxdd1["These would be jobs I would do for other people"]
@@ -78,11 +78,11 @@ App
 
 ---
 
-### Elsa's website which is in /sara
+### Elsa's website
 
 > **Note**
 
-Elsa's website which is in /sara
+Elsa's website
 
 **Referenced by:** "Freelances", "These would be jobs I would do for other people" (Such as)
 
@@ -106,7 +106,7 @@ Working with?
 
 Freelances
 
-**Connects to:** "Elsa's website which is in /sara", "These would be jobs I would do for other people"
+**Connects to:** "Elsa's website", "These would be jobs I would do for other people"
 
 **Referenced by:** "Making it."
 
@@ -150,7 +150,7 @@ Right now, I have three weeks to make something of myself, I can do it throuhg 2
 
 These would be jobs I would do for other people 
 
-**Connects to:** "Elsa's website which is in /sara" (Such as), "Other businesses in my city"
+**Connects to:** "Elsa's website" (Such as), "Other businesses in my city"
 
 **Referenced by:** "Freelances"
 

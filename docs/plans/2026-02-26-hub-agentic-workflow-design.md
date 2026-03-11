@@ -44,7 +44,7 @@ The Hub (`~/Documents/Hub/`) is a dispatch center with specialized stations that
                     ├─────────────┤
                     │ Nano        │
                     │ Licom       │
-                    │ Sara        │
+                    │ Elsa        │
                     └─────────────┘
 ```
 
@@ -52,7 +52,7 @@ The Hub (`~/Documents/Hub/`) is a dispatch center with specialized stations that
 ```
 Hub → Bob:Nano → Core/Mobile/API (departments) → subagents
 Hub → Larry:Licom → departments → subagents
-Hub → Bob:Sara → departments → subagents
+Hub → Larry:Elsa → departments → subagents
 ```
 
 Context flows UP as summaries. Work flows DOWN as structured orders. Hub never holds deep project knowledge.
@@ -338,7 +338,7 @@ Hub/bobs/
   profiles/
     nano.yaml           # Hub's knowledge about each Bob
     licom.yaml
-    sara.yaml
+    elsa.yaml
 ```
 
 ---
@@ -361,7 +361,7 @@ Hub/bobs/
 | You say | Hub does |
 |---------|----------|
 | "Let's do research on WI-007" | Moves item to Research, starts brainstorming |
-| "What's blocking Sara?" | Reads state, shows blocked reason, asks for decision |
+| "What's blocking Elsa?" | Reads state, shows blocked reason, asks for decision |
 | "Deploy execution for WI-003" | Validates plan exists, prepares dispatch to Bob |
 | "How's Licom doing?" | Reads project summary, optionally goes deeper |
 | "Update" | Re-reads mail and work items, reports changes |
@@ -427,7 +427,7 @@ Both portable independently.
 ├── projects/
 │   ├── nano.yaml
 │   ├── licom.yaml
-│   └── sara.yaml
+│   └── elsa.yaml
 │
 ├── board/
 │   ├── backlog/
@@ -458,7 +458,7 @@ Both portable independently.
 │   └── profiles/
 │       ├── nano.yaml
 │       ├── licom.yaml
-│       └── sara.yaml
+│       └── elsa.yaml
 │
 ├── docs/
 │   ├── plans/

@@ -99,7 +99,7 @@ BMO and Larrys run as **separate Claude Code sessions** in tmux on VPS. Each has
 tmux sessions on VPS:
   bmo           — Claude Code, always on, orchestrates
   larry-licom   — Claude Code, in /opt/projects/Licom
-  larry-elsa    — Claude Code, in /opt/projects/Sara
+  larry-elsa    — Claude Code, in /opt/projects/Elsa
   larry-*       — spun up as needed for new clients
 ```
 

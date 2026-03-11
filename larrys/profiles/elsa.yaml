@@ -4,8 +4,8 @@ title: "Project Architect"
 status: active
 deployed: false
 
-context_path: Sara/.planning/larry
-repo: ~/Documents/Sara
+context_path: Elsa/.planning/larry
+repo: ~/Documents/Elsa
 github: https://github.com/Smmyii/Elsa
 type: freelance
 client: Elsa
@@ -13,9 +13,9 @@ client: Elsa
 departments: []
 
 key_files:
-  - Sara/package.json
-  - Sara/prisma/schema.prisma
-  - Sara/src/app/
+  - Elsa/package.json
+  - Elsa/prisma/schema.prisma
+  - Elsa/src/app/
 
 notes: |
   Freelance client website for Elsa (hairstylist). Next.js + Prisma stack.
