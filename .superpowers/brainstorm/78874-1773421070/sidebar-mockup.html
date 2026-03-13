@@ -1,0 +1,101 @@
+<h2>Sidebar Layout</h2>
+<p class="subtitle">How it looks inside your terminal. The sidebar is a fixed Zellij pane on the left — always visible.</p>
+
+<div class="mockup" style="max-width:860px;margin:0 auto">
+  <div class="mockup-header">Ghostty — Zellij</div>
+  <div class="mockup-body" style="padding:0;display:flex;height:480px;font-family:monospace;font-size:13px;background:#0d0d0d">
+
+    <!-- Sidebar -->
+    <div style="width:200px;min-width:200px;background:#111;border-right:1px solid #2a2a2a;display:flex;flex-direction:column;padding:0">
+      <div style="padding:10px 12px 6px;color:#555;font-size:11px;letter-spacing:0.08em;text-transform:uppercase">Workspaces</div>
+
+      <!-- Active workspace -->
+      <div style="background:#1a1a2e;border-left:2px solid #7c6af7;padding:8px 12px;cursor:pointer">
+        <div style="color:#e0e0ff;font-weight:bold;font-size:13px">⬡ Nano</div>
+        <div style="color:#555;font-size:11px;margin-top:2px"> main</div>
+        <div style="margin-top:5px;display:flex;gap:6px;flex-wrap:wrap">
+          <span style="background:#1e3a1e;color:#4caf50;font-size:10px;padding:1px 6px;border-radius:3px">claude ×2</span>
+          <span style="background:#1e2a3a;color:#64b5f6;font-size:10px;padding:1px 6px;border-radius:3px">ssh vps</span>
+        </div>
+      </div>
+
+      <!-- Other workspaces -->
+      <div style="padding:8px 12px;border-left:2px solid transparent;cursor:pointer;opacity:0.7">
+        <div style="color:#ccc;font-size:13px">⬡ Licom</div>
+        <div style="color:#555;font-size:11px;margin-top:2px"> v1.1-mobile</div>
+        <div style="margin-top:5px;display:flex;gap:6px">
+          <span style="background:#1e3a1e;color:#4caf50;font-size:10px;padding:1px 6px;border-radius:3px">claude ×1</span>
+        </div>
+      </div>
+
+      <div style="padding:8px 12px;border-left:2px solid transparent;cursor:pointer;opacity:0.7">
+        <div style="color:#ccc;font-size:13px">⬡ Config</div>
+        <div style="color:#555;font-size:11px;margin-top:2px"> hypr-tweaks</div>
+        <div style="margin-top:5px">
+          <span style="color:#555;font-size:10px">idle</span>
+        </div>
+      </div>
+
+      <div style="padding:8px 12px;border-left:2px solid transparent;cursor:pointer;opacity:0.7">
+        <div style="color:#ccc;font-size:13px">⬡ Elsa</div>
+        <div style="color:#555;font-size:11px;margin-top:2px"> main</div>
+        <div style="margin-top:5px">
+          <span style="color:#555;font-size:10px">idle</span>
+        </div>
+      </div>
+
+      <!-- New workspace -->
+      <div style="padding:8px 12px;border-left:2px solid transparent;cursor:pointer;margin-top:4px">
+        <div style="color:#444;font-size:13px">+ new workspace</div>
+      </div>
+
+      <!-- Bottom: keybinds -->
+      <div style="margin-top:auto;padding:10px 12px;border-top:1px solid #1e1e1e;color:#333;font-size:10px;line-height:1.8">
+        <div><span style="color:#555">enter</span> switch</div>
+        <div><span style="color:#555">n</span> new &nbsp; <span style="color:#555">d</span> delete</div>
+        <div><span style="color:#555">ctrl+z</span> undo layout</div>
+      </div>
+    </div>
+
+    <!-- Main terminal area -->
+    <div style="flex:1;display:flex;flex-direction:column">
+      <!-- Tab bar for panes within active workspace -->
+      <div style="background:#0d0d0d;border-bottom:1px solid #1e1e1e;padding:4px 8px;display:flex;gap:8px;align-items:center">
+        <div style="background:#1a1a2e;color:#e0e0ff;padding:2px 10px;border-radius:3px;font-size:12px">claude-1</div>
+        <div style="color:#555;padding:2px 10px;font-size:12px">claude-2</div>
+        <div style="color:#555;padding:2px 10px;font-size:12px">ssh:vps</div>
+        <div style="color:#555;padding:2px 10px;font-size:12px">git</div>
+        <div style="color:#333;padding:2px 10px;font-size:12px">+</div>
+      </div>
+
+      <!-- Terminal content -->
+      <div style="flex:1;padding:14px;color:#ccc;line-height:1.6">
+        <div><span style="color:#7c6af7">claude-1</span> <span style="color:#555">~/Nano</span></div>
+        <div style="color:#888;margin-top:4px">&gt; claude</div>
+        <div style="color:#ccc;margin-top:8px">╭─ Claude Code ──────────────────────╮</div>
+        <div style="color:#ccc">│ How can I help you today?          │</div>
+        <div style="color:#ccc">╰────────────────────────────────────╯</div>
+        <div style="margin-top:12px;color:#555">▌</div>
+      </div>
+
+      <!-- Status bar -->
+      <div style="background:#0a0a0a;border-top:1px solid #1e1e1e;padding:3px 12px;display:flex;justify-content:space-between;color:#444;font-size:11px">
+        <div>Nano › claude-1</div>
+        <div>claude-sonnet-4-6 &nbsp; ctx: 12%</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<p class="subtitle" style="margin-top:1.5rem">Does this layout feel right? Let me know in the terminal — or click below.</p>
+
+<div class="options" style="margin-top:1rem">
+  <div class="option" data-choice="yes" onclick="toggleSelect(this)">
+    <div class="letter">✓</div>
+    <div class="content"><h3>Looks right</h3><p>Move on to the next design section</p></div>
+  </div>
+  <div class="option" data-choice="tweak" onclick="toggleSelect(this)">
+    <div class="letter">~</div>
+    <div class="content"><h3>Needs a tweak</h3><p>I'll tell you what to change in the terminal</p></div>
+  </div>
+</div>

@@ -1,5 +1,6 @@
 name: workspace-manager
-repo: ~/Documents/workspace-manager
+repo: ~/Documents/Config
+path: Config/workspace-manager
 agent: Larry:Desktop
 tech: [Rust, WASM, Zellij, KDL]
 status: active

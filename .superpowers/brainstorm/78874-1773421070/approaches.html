@@ -1,0 +1,66 @@
+<h2>Three Approaches</h2>
+<p class="subtitle">Pick the architecture that fits. My recommendation is highlighted.</p>
+
+<div class="options">
+  <div class="option recommended" data-choice="a" onclick="toggleSelect(this)" style="border-color: var(--accent); position:relative;">
+    <div class="letter">A</div>
+    <div class="content">
+      <h3>Native Zellij Plugin <span style="font-size:0.75rem;color:var(--accent);margin-left:0.5rem">★ Recommended</span></h3>
+      <p>A Rust/WASM plugin that lives inside Zellij as a sidebar pane. Full access to the Zellij API — manages tabs, panes, layout, keys. Workspace state persisted in plugin KV store + config files.</p>
+      <div class="pros-cons" style="margin-top:0.75rem">
+        <div class="pros"><h4>Pros</h4><ul>
+          <li>Feels like cmux — sidebar is native to Zellij</li>
+          <li>Full API: intercept keys, manage panes, track layout</li>
+          <li>One tool, no external dependencies</li>
+          <li>Claude Code writes the Rust</li>
+        </ul></div>
+        <div class="cons"><h4>Cons</h4><ul>
+          <li>Rust/WASM compile cycle is slow to debug</li>
+          <li>Zellij plugin API has some rough edges</li>
+        </ul></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="option" data-choice="b" onclick="toggleSelect(this)">
+    <div class="letter">B</div>
+    <div class="content">
+      <h3>Shell Scripts + Zellij Layouts</h3>
+      <p>Workspaces defined as TOML/YAML config files. Shell scripts create and restore Zellij sessions from those definitions. A fuzzel/rofi picker to switch between them.</p>
+      <div class="pros-cons" style="margin-top:0.75rem">
+        <div class="pros"><h4>Pros</h4><ul>
+          <li>No Rust, no WASM — pure shell/fish</li>
+          <li>Very simple to maintain and modify</li>
+          <li>Fast iteration</li>
+        </ul></div>
+        <div class="cons"><h4>Cons</h4><ul>
+          <li>No sidebar — workspace switching via launcher popup</li>
+          <li>Less integrated, more glued together</li>
+          <li>No live state (can't see what's running per project)</li>
+        </ul></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="option" data-choice="c" onclick="toggleSelect(this)">
+    <div class="letter">C</div>
+    <div class="content">
+      <h3>External TUI + Zellij Sessions</h3>
+      <p>A standalone TUI app (Go or Python) that manages workspace definitions and spawns Zellij sessions. Floats as a Hyprland window or a fixed Zellij pane.</p>
+      <div class="pros-cons" style="margin-top:0.75rem">
+        <div class="pros"><h4>Pros</h4><ul>
+          <li>Friendlier language (Go/Python)</li>
+          <li>More flexible — not limited to Zellij's plugin API</li>
+          <li>Could run without Zellij if needed</li>
+        </ul></div>
+        <div class="cons"><h4>Cons</h4><ul>
+          <li>More moving parts</li>
+          <li>Less native feel — two separate tools</li>
+          <li>Harder to intercept Zellij keys and state</li>
+        </ul></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<p class="subtitle" style="margin-top:1.5rem">Click your pick, or tell me in the terminal.</p>
