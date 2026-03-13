@@ -802,11 +802,11 @@ The state file lives at `~/.config/zellij/workspace-manager/state.json`. It pers
   ```
   Expected: 3 tests pass (`test_push_and_pop`, `test_pop_empty_returns_none`, `test_lifo_order`)
 
-- [ ] **Step 4: Add module to lib.rs**
+- [ ] **Step 3: Add module to lib.rs**
 
   Add `mod undo;` to `src/lib.rs`.
 
-- [ ] **Step 5: Commit**
+- [ ] **Step 4: Commit**
   ```bash
   git add src/undo.rs src/lib.rs
   git commit -m "feat: undo stack"
