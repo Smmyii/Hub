@@ -1,0 +1,14 @@
+name: workspace-manager
+repo: ~/Documents/workspace-manager
+agent: Larry:Desktop
+tech: [Rust, WASM, Zellij, KDL]
+status: active
+lifecycle: in-progress
+type: personal
+description: "Zellij plugin — cmux-style workspace manager with sidebar, Claude Code notifications, layout undo"
+
+summary:
+  current_focus: "Chunk 1 — Prerequisites + Scaffold + Config Parsing"
+  active_streams: 1
+  blocked_items: 0
+  last_activity: "2026-03-13"

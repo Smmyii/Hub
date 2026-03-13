@@ -51,21 +51,21 @@
 ### Task 2: Scaffold Project
 
 **Files:**
-- Create: `~/projects/workspace-manager/Cargo.toml`
-- Create: `~/projects/workspace-manager/src/lib.rs`
-- Create: `~/projects/workspace-manager/.cargo/config.toml`
+- Create: `~/Documents/workspace-manager/Cargo.toml`
+- Create: `~/Documents/workspace-manager/src/lib.rs`
+- Create: `~/Documents/workspace-manager/.cargo/config.toml`
 
 - [ ] **Step 1: Create project directory**
   ```bash
-  mkdir -p ~/projects/workspace-manager/src
-  mkdir -p ~/projects/workspace-manager/.cargo
-  cd ~/projects/workspace-manager
+  mkdir -p ~/Documents/workspace-manager/src
+  mkdir -p ~/Documents/workspace-manager/.cargo
+  cd ~/Documents/workspace-manager
   git init
   ```
 
 - [ ] **Step 2: Write Cargo.toml**
 
-  Create `~/projects/workspace-manager/Cargo.toml`:
+  Create `~/Documents/workspace-manager/Cargo.toml`:
   ```toml
   [package]
   name = "workspace-manager"
@@ -87,7 +87,7 @@
 
 - [ ] **Step 3: Write .cargo/config.toml**
 
-  Create `~/projects/workspace-manager/.cargo/config.toml`:
+  Create `~/Documents/workspace-manager/.cargo/config.toml`:
   ```toml
   [build]
   target = "wasm32-wasip1"
@@ -95,7 +95,7 @@
 
 - [ ] **Step 4: Write minimal lib.rs that compiles**
 
-  Create `~/projects/workspace-manager/src/lib.rs`:
+  Create `~/Documents/workspace-manager/src/lib.rs`:
   ```rust
   use std::collections::BTreeMap;
   use zellij_tile::prelude::*;
@@ -122,7 +122,7 @@
 
 - [ ] **Step 5: Verify it compiles**
   ```bash
-  cd ~/projects/workspace-manager
+  cd ~/Documents/workspace-manager
   cargo build --release 2>&1
   ```
   Expected: `Compiling workspace-manager` ... `Finished release`
@@ -140,13 +140,13 @@
 ### Task 3: Workspace Config Types
 
 **Files:**
-- Create: `~/projects/workspace-manager/src/workspace.rs`
-- Create: `~/projects/workspace-manager/src/config.rs`
+- Create: `~/Documents/workspace-manager/src/workspace.rs`
+- Create: `~/Documents/workspace-manager/src/config.rs`
 - Test: inside `config.rs` as `#[cfg(test)]`
 
 - [ ] **Step 1: Write workspace.rs**
 
-  Create `~/projects/workspace-manager/src/workspace.rs`:
+  Create `~/Documents/workspace-manager/src/workspace.rs`:
   ```rust
   #[derive(Debug, Clone, PartialEq)]
   pub struct PaneSpec {
@@ -195,7 +195,7 @@
 
 - [ ] **Step 2: Write failing test for KDL config parsing**
 
-  Create `~/projects/workspace-manager/src/config.rs`:
+  Create `~/Documents/workspace-manager/src/config.rs`:
   ```rust
   use crate::workspace::{PaneSpec, WorkspaceSpec};
 
@@ -254,7 +254,7 @@
 
 - [ ] **Step 3: Run tests to verify they fail**
   ```bash
-  cd ~/projects/workspace-manager
+  cd ~/Documents/workspace-manager
   cargo test --lib config 2>&1
   ```
   Expected: tests compile but fail at runtime — `test tests::test_parse_single_workspace ... FAILED` (panicked at 'not yet implemented')
@@ -335,14 +335,14 @@
 ### Task 4: State File Persistence
 
 **Files:**
-- Create: `~/projects/workspace-manager/src/state_file.rs`
+- Create: `~/Documents/workspace-manager/src/state_file.rs`
 - Test: inside `state_file.rs` as `#[cfg(test)]`
 
 The state file lives at `~/.config/zellij/workspace-manager/state.json`. It persists which workspaces are open and their notification status between Zellij restarts.
 
 - [ ] **Step 1: Write failing tests**
 
-  Create `~/projects/workspace-manager/src/state_file.rs`:
+  Create `~/Documents/workspace-manager/src/state_file.rs`:
   ```rust
   use serde::{Deserialize, Serialize};
 
@@ -450,14 +450,14 @@ The state file lives at `~/.config/zellij/workspace-manager/state.json`. It pers
 ### Task 5: Notification State Machine
 
 **Files:**
-- Create: `~/projects/workspace-manager/src/app_state.rs`
+- Create: `~/Documents/workspace-manager/src/app_state.rs`
 - Test: inside `app_state.rs`
 
 `AppState` is the central struct the plugin holds. It owns the workspace list and handles all state transitions.
 
 - [ ] **Step 1: Write failing tests**
 
-  Create `~/projects/workspace-manager/src/app_state.rs`:
+  Create `~/Documents/workspace-manager/src/app_state.rs`:
   ```rust
   use crate::workspace::{Workspace, WorkspaceSpec, NotificationStatus, PaneSpec};
 
@@ -621,11 +621,11 @@ The state file lives at `~/.config/zellij/workspace-manager/state.json`. It pers
 ### Task 6: Pipe Message Parsing
 
 **Files:**
-- Create: `~/projects/workspace-manager/src/pipe.rs`
+- Create: `~/Documents/workspace-manager/src/pipe.rs`
 
 - [ ] **Step 1: Write failing tests**
 
-  Create `~/projects/workspace-manager/src/pipe.rs`:
+  Create `~/Documents/workspace-manager/src/pipe.rs`:
   ```rust
   #[derive(Debug, PartialEq)]
   pub enum PipeEvent {
@@ -719,11 +719,11 @@ The state file lives at `~/.config/zellij/workspace-manager/state.json`. It pers
 ### Task 7: Undo Stack
 
 **Files:**
-- Create: `~/projects/workspace-manager/src/undo.rs`
+- Create: `~/Documents/workspace-manager/src/undo.rs`
 
 - [ ] **Step 1: Write failing tests**
 
-  Create `~/projects/workspace-manager/src/undo.rs`:
+  Create `~/Documents/workspace-manager/src/undo.rs`:
   ```rust
   /// Operations that can be undone.
   /// Each variant stores the data needed to reverse the operation.
@@ -819,13 +819,13 @@ The state file lives at `~/.config/zellij/workspace-manager/state.json`. It pers
 ### Task 8: Sidebar Renderer
 
 **Files:**
-- Create: `~/projects/workspace-manager/src/render.rs`
+- Create: `~/Documents/workspace-manager/src/render.rs`
 
 The renderer writes ANSI escape sequences to stdout. Zellij's `render()` function is called each time the plugin needs to repaint. The sidebar is 28 columns wide.
 
 - [ ] **Step 1: Write render.rs**
 
-  Create `~/projects/workspace-manager/src/render.rs`:
+  Create `~/Documents/workspace-manager/src/render.rs`:
   ```rust
   use crate::app_state::AppState;
   use crate::workspace::NotificationStatus;
@@ -934,13 +934,13 @@ The renderer writes ANSI escape sequences to stdout. Zellij's `render()` functio
 ### Task 9: Plugin Wiring
 
 **Files:**
-- Modify: `~/projects/workspace-manager/src/lib.rs`
+- Modify: `~/Documents/workspace-manager/src/lib.rs`
 
 Wire all modules into the `ZellijPlugin` implementation. This replaces the stub from Task 2.
 
 - [ ] **Step 1: Overwrite lib.rs with full implementation**
 
-  Overwrite `~/projects/workspace-manager/src/lib.rs`:
+  Overwrite `~/Documents/workspace-manager/src/lib.rs`:
   ```rust
   mod app_state;
   mod config;
@@ -1162,7 +1162,7 @@ Wire all modules into the `ZellijPlugin` implementation. This replaces the stub 
 ### Task 10: Load Plugin into Zellij + Manual Smoke Test
 
 **Files:**
-- Create: `~/projects/workspace-manager/workspace-manager.kdl` (Zellij layout file)
+- Create: `~/Documents/workspace-manager/workspace-manager.kdl` (Zellij layout file)
 - Create: `~/.config/zellij/workspace-manager/workspaces.kdl` (user config)
 
 - [ ] **Step 1: Create user config directory and sample workspaces.kdl**
@@ -1180,7 +1180,7 @@ Wire all modules into the `ZellijPlugin` implementation. This replaces the stub 
 
 - [ ] **Step 2: Create Zellij layout that loads the plugin**
 
-  Create `~/projects/workspace-manager/workspace-manager.kdl`:
+  Create `~/Documents/workspace-manager/workspace-manager.kdl`:
   ```kdl
   layout {
       pane size=28 {
@@ -1192,7 +1192,7 @@ Wire all modules into the `ZellijPlugin` implementation. This replaces the stub 
 
 - [ ] **Step 3: Launch Zellij with the layout**
   ```bash
-  cd ~/projects/workspace-manager
+  cd ~/Documents/workspace-manager
   zellij --layout workspace-manager.kdl
   ```
   Expected: Zellij opens with sidebar on left showing "WORKSPACES" header and "test-ws" entry
@@ -1217,11 +1217,11 @@ Wire all modules into the `ZellijPlugin` implementation. This replaces the stub 
 ### Task 11: wm-notify Shell Script
 
 **Files:**
-- Create: `~/projects/workspace-manager/wm-notify`
+- Create: `~/Documents/workspace-manager/wm-notify`
 
 - [ ] **Step 1: Write wm-notify**
 
-  Create `~/projects/workspace-manager/wm-notify`:
+  Create `~/Documents/workspace-manager/wm-notify`:
   ```bash
   #!/usr/bin/env bash
   # wm-notify — send notification event to workspace-manager plugin
@@ -1254,12 +1254,12 @@ Wire all modules into the `ZellijPlugin` implementation. This replaces the stub 
 
 - [ ] **Step 2: Make executable**
   ```bash
-  chmod +x ~/projects/workspace-manager/wm-notify
+  chmod +x ~/Documents/workspace-manager/wm-notify
   ```
 
 - [ ] **Step 3: Manual test outside Zellij**
   ```bash
-  ~/projects/workspace-manager/wm-notify waiting
+  ~/Documents/workspace-manager/wm-notify waiting
   ```
   Expected: exits silently (no Zellij env, graceful no-op)
 
@@ -1267,7 +1267,7 @@ Wire all modules into the `ZellijPlugin` implementation. This replaces the stub 
 
   Open a Zellij session with the plugin loaded (from Task 10). In a terminal pane:
   ```bash
-  ~/projects/workspace-manager/wm-notify waiting
+  ~/Documents/workspace-manager/wm-notify waiting
   ```
   Expected: sidebar entry for the current workspace shows amber `⏳ waiting` badge
 
@@ -1282,13 +1282,13 @@ Wire all modules into the `ZellijPlugin` implementation. This replaces the stub 
 ### Task 12: install.sh
 
 **Files:**
-- Create: `~/projects/workspace-manager/install.sh`
+- Create: `~/Documents/workspace-manager/install.sh`
 
 Automates: copying `wm-notify` to `~/.local/bin`, patching fish config with Ctrl+Z bind, patching `~/.claude/settings.json` with hooks.
 
 - [ ] **Step 1: Write install.sh**
 
-  Create `~/projects/workspace-manager/install.sh`:
+  Create `~/Documents/workspace-manager/install.sh`:
   ```bash
   #!/usr/bin/env bash
   set -euo pipefail
@@ -1358,18 +1358,18 @@ Automates: copying `wm-notify` to `~/.local/bin`, patching fish config with Ctrl
 
 - [ ] **Step 2: Make executable**
   ```bash
-  chmod +x ~/projects/workspace-manager/install.sh
+  chmod +x ~/Documents/workspace-manager/install.sh
   ```
 
 - [ ] **Step 3: Dry-run test**
   ```bash
-  bash -n ~/projects/workspace-manager/install.sh
+  bash -n ~/Documents/workspace-manager/install.sh
   ```
   Expected: no syntax errors
 
 - [ ] **Step 4: Run install**
   ```bash
-  ~/projects/workspace-manager/install.sh
+  ~/Documents/workspace-manager/install.sh
   ```
   Expected: builds plugin, installs `wm-notify`, patches fish config and Claude settings
 
@@ -1397,7 +1397,7 @@ Automates: copying `wm-notify` to `~/.local/bin`, patching fish config with Ctrl
 
 - [ ] **Step 1: Launch workspace-manager in Zellij**
   ```bash
-  zellij --layout ~/projects/workspace-manager/workspace-manager.kdl
+  zellij --layout ~/Documents/workspace-manager/workspace-manager.kdl
   ```
 
 - [ ] **Step 2: Verify sidebar shows workspaces from workspaces.kdl**
@@ -1420,7 +1420,7 @@ Automates: copying `wm-notify` to `~/.local/bin`, patching fish config with Ctrl
 
 - [ ] **Step 6: Tag release**
   ```bash
-  cd ~/projects/workspace-manager
+  cd ~/Documents/workspace-manager
   git tag v0.1.0
   echo "workspace-manager v0.1.0 complete"
   ```
