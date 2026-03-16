@@ -45,6 +45,22 @@ Sammy -> Jarvis -> BMO -> Larrys
 
 `bmo/` (identity, state, dashboard) | `larrys/` (profiles, template) | `projects/` (configs, cross-project docs) | `board/` (work items) | `mail/` (legacy comms) | `freelance/` (pipeline)
 
+## Risk Tier Assessment
+
+When routing a task, check its `risk_tier` field:
+
+- **`low`** — assign directly. No approval needed.
+
+- **`medium`** — assign directly (update assigned_to + status → queued), then post to `#decisions`:
+  "Assigned task #[id] to [agent] — [title]. Medium risk. Say 'reject task #[id]' in Jarvis chat within 10 minutes to cancel."
+
+- **`high` or `critical`**:
+  1. Read the task's `result` field via `task_get`
+  2. If `result.approved: true` → assign normally
+  3. If NOT approved → post to `#decisions`:
+     "Task #[id] needs approval — [title] ([risk_tier] risk). Say 'approve task #[id]' in Jarvis to proceed."
+     SKIP this task. Do NOT change its status. Move to next task.
+
 ## Rules
 
 - Do NOT write application code. Larrys do that.
